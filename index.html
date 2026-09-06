@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>KNCOK — Intelligence for a Safer Digital World</title>
+
+  <meta
+    name="description"
+    content="KNCOK is building intelligence and technology to help people understand fraud, financial crime, risk and digital threats."
+  />
+
+  <meta name="theme-color" content="#ffffff" />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #6b6b6b;
+      --line: #e8e8e8;
+      --soft: #f7f7f7;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max));
+      margin: auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    header {
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      width: 105px;
+      height: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      transition: color .2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      padding: 100px 0;
+    }
+
+    .hero-content {
+      max-width: 950px;
+    }
+
+    .hero-logo {
+      width: min(340px, 65vw);
+      height: auto;
+      display: block;
+      margin-bottom: 55px;
+    }
+
+    .eyebrow {
+      margin-bottom: 24px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    h1 {
+      max-width: 900px;
+      font-size: clamp(48px, 7vw, 86px);
+      line-height: .98;
+      letter-spacing: -.065em;
+      font-weight: 700;
+    }
+
+    .hero-description {
+      max-width: 680px;
+      margin-top: 35px;
+      font-size: 20px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 38px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid var(--text);
+      font-size: 14px;
+      transition: all .2s ease;
+    }
+
+    .button.primary {
+      background: var(--text);
+      color: #fff;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    section {
+      padding: 115px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: .65fr 1.35fr;
+      gap: 80px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.04;
+      letter-spacing: -.05em;
+    }
+
+    .large-copy {
+      max-width: 760px;
+      font-size: 21px;
+      line-height: 1.55;
+      color: #333;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-copy p + p {
+      margin-top: 25px;
+    }
+
+    /* =========================
+       BELIEFS
+    ========================= */
+
+    .beliefs {
+      border-top: 1px solid var(--line);
+    }
+
+    .belief {
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      gap: 20px;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .belief-number {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .belief h3 {
+      margin-bottom: 8px;
+      font-size: 21px;
+      letter-spacing: -.025em;
+    }
+
+    .belief p {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* =========================
+       RISX
+    ========================= */
+
+    .risx-section {
+      background: var(--soft);
+    }
+
+    .risx-card {
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 50px;
+    }
+
+    .risx-logo {
+      width: min(330px, 80%);
+      height: auto;
+      display: block;
+      margin-bottom: 38px;
+    }
+
+    .risx-card h2 {
+      max-width: 700px;
+    }
+
+    .risx-description {
+      max-width: 700px;
+      font-size: 18px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .risx-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: 45px;
+      border-top: 1px solid var(--line);
+    }
+
+    .risx-point {
+      padding: 25px 25px 10px 0;
+    }
+
+    .risx-point + .risx-point {
+      padding-left: 25px;
+      border-left: 1px solid var(--line);
+    }
+
+    .risx-point strong {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 15px;
+    }
+
+    .risx-point span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       VISION
+    ========================= */
+
+    .vision {
+      background: #fafafa;
+    }
+
+    .vision-statement {
+      max-width: 850px;
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: 1.06;
+      letter-spacing: -.055em;
+    }
+
+    .vision-support {
+      max-width: 700px;
+      margin-top: 35px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    /* =========================
+       MISSION
+    ========================= */
+
+    .mission-copy {
+      max-width: 760px;
+    }
+
+    .mission-copy p {
+      font-size: 18px;
+      line-height: 1.65;
+      color: #444;
+    }
+
+    .mission-copy p + p {
+      margin-top: 22px;
+    }
+
+    /* =========================
+       FUTURE
+    ========================= */
+
+    .future-box {
+      padding: 45px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .future-box p {
+      max-width: 760px;
+      font-size: 20px;
+      color: var(--muted);
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-title {
+      max-width: 750px;
+    }
+
+    .contact-description {
+      max-width: 650px;
+      margin-top: 25px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 55px 0;
+    }
+
+    .footer-grid {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer-logo {
+      width: 100px;
+      height: auto;
+    }
+
+    .footer-right {
+      text-align: right;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 22px;
+      justify-content: flex-end;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .copyright {
+      margin-top: 15px;
+      color: #999;
+      font-size: 12px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 760px) {
+
+      .container {
+        width: min(calc(100% - 28px), var(--max));
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 90px 0;
+      }
+
+      .hero-logo {
+        width: 250px;
+        margin-bottom: 45px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .belief {
+        grid-template-columns: 45px 1fr;
+      }
+
+      .risx-card {
+        padding: 30px;
+      }
+
+      .risx-points {
+        grid-template-columns: 1fr;
+      }
+
+      .risx-point {
+        padding: 22px 0;
+      }
+
+      .risx-point + .risx-point {
+        padding-left: 0;
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .footer-grid {
+        flex-direction: column;
+      }
+
+      .footer-right {
+        text-align: left;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <header>
+    <div class="container">
+      <nav>
+
+        <a href="/" aria-label="KNCOK home">
+          <img
+            src="kncok.png"
+            alt="KNCOK"
+            class="nav-logo"
+          />
+        </a>
+
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#risx">RISX</a>
+          <a href="#vision">Vision</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <img
+            src="kncok.png"
+            alt="KNCOK"
+            class="hero-logo"
+          />
+
+          <div class="eyebrow">
+            Intelligence · Technology · Public Interest
+          </div>
+
+          <h1>
+            Building intelligence for a safer digital world.
+          </h1>
+
+          <p class="hero-description">
+            KNCOK is building technology and intelligence around
+            fraud, financial crime, risk and digital threats —
+            making complex information easier to understand,
+            connect and act upon.
+          </p>
+
+          <div class="hero-actions">
+
+            <a href="#about" class="button primary">
+              Discover KNCOK
+            </a>
+
+            <a
+              href="https://risx.kncok.com"
+              class="button"
+              target="_blank"
+              rel="noopener"
+            >
+              Explore RISX →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about">
+
+      <div class="container">
+
+        <div class="section-grid">
+
+          <div>
+            <div class="section-label">
+              What is KNCOK?
+            </div>
+          </div>
+
+          <div class="about-copy">
+
+            <h2>
+              Information is everywhere.
+              Understanding it is not.
+            </h2>
+
+            <p class="large-copy">
+              Digital fraud and financial crime leave behind
+              fragments of information — reports, numbers,
+              domains, messages, identities, transactions,
+              behaviours and patterns.
+            </p>
+
+            <p class="large-copy muted">
+              KNCOK exists to turn those fragments into
+              useful intelligence.
+            </p>
+
+            <p class="large-copy muted">
+              We believe better intelligence can help people
+              recognise risk earlier, understand what happened
+              and make better decisions.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHAT WE BELIEVE
+    ========================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-grid">
+
+          <div>
+            <div class="section-label">
+              What we believe
+            </div>
+          </div>
+
+          <div>
+
+            <h2>
+              Intelligence should be useful,
+              understandable and responsible.
+            </h2>
+
+            <div class="beliefs">
+
+              <div class="belief">
+
+                <div class="belief-number">01</div>
+
+                <div>
+                  <h3>Evidence over speculation.</h3>
+                  <p>
+                    Information should be grounded in evidence,
+                    traceable to its source and presented with
+                    appropriate context.
+                  </p>
+                </div>
+
+              </div>
+
+
+              <div class="belief">
+
+                <div class="belief-number">02</div>
+
+                <div>
+                  <h3>Context over sensationalism.</h3>
+                  <p>
+                    Risk information should help people
+                    understand a threat rather than simply
+                    create fear.
+                  </p>
+                </div>
+
+              </div>
+
+
+              <div class="belief">
+
+                <div class="belief-number">03</div>
+
+                <div>
+                  <h3>Accessibility over gatekeeping.</h3>
+                  <p>
+                    Useful intelligence should be accessible
+                    to people beyond specialist environments.
+                  </p>
+                </div>
+
+              </div>
+
+
+              <div class="belief">
+
+                <div class="belief-number">04</div>
+
+                <div>
+                  <h3>Technology in service of people.</h3>
+                  <p>
+                    Technology should make difficult information
+                    easier to discover, understand and use.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         RISX
+    ========================= -->
+
+    <section id="risx" class="risx-section">
+
+      <div class="container">
+
+        <div class="section-grid">
+
+          <div>
+            <div class="section-label">
+              Our first product
+            </div>
+          </div>
+
+          <div>
+
+            <div class="risx-card">
+
+              <img
+                src="RISX.png"
+                alt="RISX"
+                class="risx-logo"
+              />
+
+              <h2>
+                A public intelligence layer for digital fraud.
+              </h2>
+
+              <p class="risx-description">
+                RISX is KNCOK's first product — a public-facing
+                fraud intelligence platform designed to turn
+                reported incidents and scattered information
+                into structured, searchable and understandable
+                intelligence.
+              </p>
+
+              <div class="risx-points">
+
+                <div class="risx-point">
+                  <strong>Understand</strong>
+                  <span>
+                    See what happened and how a fraud works.
+                  </span>
+                </div>
+
+                <div class="risx-point">
+                  <strong>Investigate</strong>
+                  <span>
+                    Explore clues, entities and connections
+                    surrounding incidents.
+                  </span>
+                </div>
+
+                <div class="risx-point">
+                  <strong>Stay informed</strong>
+                  <span>
+                    Follow emerging fraud patterns and
+                    intelligence.
+                  </span>
+                </div>
+
+              </div>
+
+              <div class="hero-actions">
+
+                <a
+                  href="https://risx.kncok.com"
+                  class="button primary"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Visit RISX →
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         VISION
+    ========================= -->
+
+    <section id="vision" class="vision">
+
+      <div class="container">
+
+        <div class="section-grid">
+
+          <div>
+            <div class="section-label">
+              Vision
+            </div>
+          </div>
+
+          <div>
+
+            <div class="vision-statement">
+              A world where people can understand
+              digital risk before it becomes harm.
+            </div>
+
+            <p class="vision-support">
+              KNCOK's long-term ambition is to build useful
+              intelligence infrastructure around the risks
+              emerging from an increasingly digital world.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MISSION
+    ========================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-grid">
+
+          <div>
+            <div class="section-label">
+              The mission
+            </div>
+          </div>
+
+          <div class="mission-copy">
+
+            <h2>
+              Make intelligence accessible
+              before it is urgently needed.
+            </h2>
+
+            <p>
+              Fraud does not happen in isolation. The same
+              tactics, infrastructure, identities and behaviours
+              can appear across many incidents.
+            </p>
+
+            <p>
+              Yet the information needed to recognise those
+              patterns is often fragmented across reports,
+              platforms and individual experiences.
+            </p>
+
+            <p>
+              KNCOK is building toward a world where those
+              fragments can be connected into intelligence
+              that helps people see the bigger picture.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         BUILDING
+    ========================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-grid">
+
+          <div>
+            <div class="section-label">
+              What we're building
+            </div>
+          </div>
+
+          <div>
+
+            <h2>
+              Start with fraud.
+              Build toward intelligence.
+            </h2>
+
+            <div class="future-box">
+
+              <p>
+                RISX is the beginning — not the definition
+                of everything KNCOK can become.
+              </p>
+
+              <br />
+
+              <p>
+                We are starting with one of the most visible
+                forms of digital harm: fraud. The lessons,
+                intelligence and infrastructure built here
+                can form the foundation for a much broader
+                understanding of digital risk.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRINCIPLES
+    ========================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-grid">
+
+          <div>
+            <div class="section-label">
+              Principles
+            </div>
+          </div>
+
+          <div>
+
+            <h2>
+              Build carefully.
+              Explain clearly.
+              Think long-term.
+            </h2>
+
+            <div class="beliefs">
+
+              <div class="belief">
+                <div class="belief-number">01</div>
+                <div>
+                  <h3>Independent thinking.</h3>
+                  <p>
+                    Build with curiosity, skepticism and
+                    a willingness to question assumptions.
+                  </p>
+                </div>
+              </div>
+
+              <div class="belief">
+                <div class="belief-number">02</div>
+                <div>
+                  <h3>Responsible intelligence.</h3>
+                  <p>
+                    Intelligence should inform decisions,
+                    not manufacture certainty.
+                  </p>
+                </div>
+              </div>
+
+              <div class="belief">
+                <div class="belief-number">03</div>
+                <div>
+                  <h3>Long-term thinking.</h3>
+                  <p>
+                    Build infrastructure that becomes more
+                    useful as knowledge accumulates.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="section-grid">
+
+          <div>
+            <div class="section-label">
+              KNCOK
+            </div>
+          </div>
+
+          <div>
+
+            <h2 class="contact-title">
+              We're building for the long term.
+            </h2>
+
+            <p class="contact-description">
+              KNCOK is an independent company building
+              intelligence and technology around fraud,
+              financial crime, risk and digital safety.
+            </p>
+
+            <div class="hero-actions">
+
+              <a
+                href="https://risx.kncok.com"
+                class="button primary"
+                target="_blank"
+                rel="noopener"
+              >
+                Explore RISX
+              </a>
+
+              <a
+                href="https://x.com/KncokHQ"
+                class="button"
+                target="_blank"
+                rel="noopener"
+              >
+                X / @KncokHQ
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/kncok/"
+                class="button"
+                target="_blank"
+                rel="noopener"
+              >
+                LinkedIn
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <img
+          src="kncok.png"
+          alt="KNCOK"
+          class="footer-logo"
+        />
+
+        <div class="footer-right">
+
+          <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#risx">RISX</a>
+            <a href="#vision">Vision</a>
+            <a href="#contact">Contact</a>
+          </div>
+
+          <div class="copyright">
+            © 2026 KNCOK. All rights reserved.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
